@@ -1,0 +1,79 @@
+body, html{
+  background-image: url("../images/background1.JPG");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  display: grid;
+  height: 100%;
+}
+
+.center{
+  margin: auto;
+  background-color:rgba(0, 0, 0, 0.2);
+  width: 75%;
+  border: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.center-text{
+  text-align: center;
+}
+
+.title{
+  text-align: center;
+  color: white;
+}
+
+.subtitle{
+  text-align: center;
+  color: white;
+}
+
+.pages{
+  color: white;
+  font-size: 20px;
+}
+
+.social{
+  padding-left: 10px;
+  font-size: 50px;
+  color: white;
+}
+
+#github:hover{
+  text-decoration:none;
+  color:black;
+}
+
+#linkedin:hover{
+  text-decoration:none;
+  color: #0077B5;
+}
+
+#twitter:hover{
+  text-decoration:none;
+  color: #00aced;
+}
+
+#instagram:hover{
+  text-decoration:none;
+  -webkit-animation-name: instagram;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 3s; 
+}
+
+@-webkit-keyframes instagram {  
+  0% { color: #405de6; }
+  10% { color: #5851db; }
+  20% { color: #833ab4; }
+  30% { color: #c13584; }
+  40% { color: #e1306c; }
+  50% { color: #fd1d1d; }
+  60% { color: #f56040; }
+  70% { color: #f77737; }
+  80% { color: #fcaf45; }
+  90% { color: #ffdc80; }
+  100% { color: #405de6; }
+}

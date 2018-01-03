@@ -1,0 +1,62 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css')
+    link(rel='stylesheet', href='stylesheets/style.css')
+    title #{title}
+  body
+    .container.center
+      h1.title #{title}
+      h3.subtitle Software Developer
+      .row.animated.bounceInUp
+        .center-text
+          a.pages(href='') Blog
+          span.pages |
+          a.pages(href='') Portafolio
+          span.pages |
+          a.pages(data-toggle='modal', data-target='#modal') Contacto
+      .row.animated.bounceInDown
+        .center-text
+          a#github.social(href='')
+            i.fa.fa-github(aria-hidden='true')
+          a#linkedin.social(href='')
+            i.fa.fa-linkedin-square(aria-hidden='true')
+          a#twitter.social(href='')
+            i.fa.fa-twitter(aria-hidden='true')
+          a#instagram.social(href='')
+            i.fa.fa-instagram(aria-hidden='true')
+    #modal.modal.fade(tabindex='-1', role='dialog')
+      form(method='post')
+        if errors
+          ul
+            for error in errors
+              li!=error.msg
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+              h2.modal-title Formulario de contacto
+            .modal-body
+              .form-group
+                label(for='') Nombre
+                input.form-control(type='text', placeholder='John Doe', name='name')
+              .form-group
+                label(for='') Asunto
+                input.form-control(type='text', placeholder='Contacto', name='subject')
+              .form-group
+                label(for='') Correo electrónico
+                input.form-control(type='email', placeholder='john@doe.com', name='email')
+              .form-group
+                label(for='') Mensaje
+                textarea.form-control(cols='20', rows='5', name='message')
+            .modal-footer
+              button.btn.btn-default(type='button', data-dismiss='modal') Cerrar
+              button.btn.btn-primary(type='submit') Enviar
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
